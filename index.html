@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Assignment</title>
+		<link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />	
+	</head>
+	<body ng-app='myApp'>
+		<div class="container" ng-controller="myCtrl">			
+			<div class="row">
+				<div class="col-sm-4">
+					<input class="form-control" ng-model="searchItem">
+					<br>
+					<ul class="list-group">
+						<li class="list-group-item" ng-repeat="item in leftList |filter:searchItem" ng-click="onRight($index)">{{item}}
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<br>
+					<br>
+					<ul class="list-group">
+						<li class="list-group-item" ng-repeat="item in rightList">{{item}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="js/script.js"></script>
+		
+	</body>
+</html>
