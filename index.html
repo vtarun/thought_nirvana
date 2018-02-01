@@ -6,20 +6,18 @@
 		<link href="css/style.css" rel="stylesheet" />	
 	</head>
 	<body ng-app='myApp'>
-		<div class="container" ng-controller="myCtrl">			
+		<div class="container" ng-controller="myCtrl">	
 			<div class="row">
 				<div class="col-sm-4">
-					<input class="form-control" ng-model="searchItem">
-					<br>
+					<input class="form-control" ng-model="searchItem" placeholder="search item">
+					<br>					
 					<ul class="list-group">
-						<li class="list-group-item" ng-repeat="item in leftList |filter:searchItem" ng-click="onRight($index)">{{item}}
+						<li class="list-group-item" ng-repeat="item in leftList |filter:searchItem"  ng-click="onRight($index)" >{{item}}
 						</li>
 					</ul>
 				</div>
 				<div class="col-sm-4">
-					<br>
-					<br>
-					<ul class="list-group">
+					<ul class="list-group rightList">
 						<li class="list-group-item" ng-repeat="item in rightList">{{item}}</li>
 					</ul>
 				</div>

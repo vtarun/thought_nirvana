@@ -7,6 +7,10 @@
 	margin-top: 30px;
 }
 
-ul li{
+.container ul li{
 	margin-bottom: 3px;
+}
+
+.container div .rightList{	
+	margin-top: 63px;
 }
